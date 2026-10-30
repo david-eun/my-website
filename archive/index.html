@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>David Eun's Side B</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=VT323&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap"
+        rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="wrap">
+        <header>
+            <pre class="boot" id="boot">DAVID-EUN v19.3 · (c) 2007–2026
+[<span class="ok"> ok </span>] mounting side_b
+[<span class="ok"> ok </span>] loading liszt_s541_3
+[<span class="ok"> ok </span>] calibrating onion (6 layers, 0 tears)
+            </pre>
+            <div class="title">
+                <div>
+                    <p class="who">DAVID-EUN/</p>
+                    <h1 class="glow">SIDE_B<span class="cur" aria-hidden="true"></span></h1>
+                </div>
+                <div class="mascot"><button id="mascot"></button><span
+                        id="zorpCap">zorp (hi!)</span></div>
+            </div>
+            <p class="lede">This archive shows the part of me that text like resumes can't hold.</p>
+            <nav class="menu" aria-label="Programs">
+                <a href="#cd"><kbd>1</kbd> play liebestraum</a>
+                <a href="#ls"><kbd>2</kbd> ls -l photos/</a>
+            </nav>
+        </header>
+
+        <section class="prog" id="cd">
+            <div class="phead">
+                <h2><span class="addr">0x01</span>play liebestraum</h2>
+                <p class="cmt">// Progress on learning Franz Liszt's Liebestraum No. 3 in A-Flat major, S. 541/3.</p>
+            </div>
+            <div class="cdplayer" id="cdplayer">
+                <div class="disc" aria-hidden="true">
+                    <div class="lbl">
+                        <div><b>LISZT</b>S.541/3 · A♭</div>
+                    </div>
+                    <div class="hole"></div>
+                </div>
+                <div class="dpanel">
+                    <div class="lcd" aria-live="polite">
+                        <div class="row"><span id="lTrk">TRK 01/04</span><span id="lTime">00:00.00</span></div>
+                        <div class="row"><span id="lTitle">FULL_TAKE</span><span id="lState">■ STOP</span></div>
+                    </div>
+                    <div class="btns">
+                        <button class="key" id="prev" aria-label="Previous track">|◀◀</button>
+                        <button class="key" id="play">▶ play</button>
+                        <button class="key" id="next" aria-label="Next track">▶▶|</button>
+                    </div>
+                    <div class="trks" id="trks"></div>
+                </div>
+            </div>
+            <div class="screen" id="screen" hidden><i class="corner c1"></i><i class="corner c2"></i><i
+                    class="corner c3"></i><i class="corner c4"></i>
+                <div id="scr"></div>
+            </div>
+            <p class="cap" id="cap"></p>
+        </section>
+
+        <!-- 0x02 -->
+        <section class="prog" id="ls">
+            <div class="phead">
+                <h2><span class="addr">0x02</span>ls -l photos/</h2>
+                <span class="cmt">// Photos of my work. Click a file to open it.</span>
+            </div>
+            <div class="lsmod">
+                <div class="tablewrap">
+                    <table>
+                        <tbody id="lsBody"></tbody>
+                    </table>
+                </div>
+                <div class="viewer">
+                    <div class="img"><i class="corner c1"></i><i class="corner c2"></i><i class="corner c3"></i><i
+                            class="corner c4"></i><span class="ph" id="vPh"></span></div>
+                    <div class="cap" id="vCap"></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
